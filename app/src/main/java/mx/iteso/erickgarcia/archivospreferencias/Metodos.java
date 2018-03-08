@@ -59,4 +59,12 @@ public class Metodos {
         }
         return existe;
     }
+
+    // lo woa necesitar para la tarea
+    public boolean clearAll(String keyShared) {
+        sharedPreferences = activity.getSharedPreferences(keyShared, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        editor.clear();
+        return editor.commit();
+    }
 }
